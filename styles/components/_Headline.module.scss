@@ -1,0 +1,42 @@
+.headline__background__container {
+    position: relative;
+    
+    .headline__background {   
+        position: absolute;
+        top: 2rem;
+        right: 0;
+        left: 0;
+    
+        &::before {
+            content: '';
+            position: absolute;
+            background: #272A2B;
+            mix-blend-mode: multiply;
+            opacity: 0.6;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+        }
+    
+        .headline__container {
+    
+            .headline {
+                position: relative;
+                @include headline_large($color__light);
+                text-shadow: 4px 4px 6px rgba(39, 42, 43, 0.65);
+                padding: 1.9rem 6rem 1.1rem;
+                margin: 0;
+                z-index: 5;
+            }
+
+            .headline-blue {
+                position: relative;
+                @include headline_large($color__primary);
+                text-shadow: 4px 4px 6px rgba(39, 42, 43, 0.65);
+                padding: 1.9rem 6rem 1.1rem;
+                margin: 0;
+                z-index: 5;
+            }            
+        }
+    }
+}

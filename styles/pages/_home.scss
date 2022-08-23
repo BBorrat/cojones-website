@@ -1,0 +1,793 @@
+.cta__container {
+    height: 25vh;
+
+    .cta__text {
+        @include headline_large($color__neutral);
+        padding: 2.3rem 6rem 0;
+        
+        .blue {
+            color: $color__primary;
+        }
+    }
+}
+
+/* -------------------------------------------------------- */
+/* Home Hero Section */ 
+
+.home__hero {
+    padding-top: 5.5rem;
+
+    &__headline {
+        width: 74rem;
+    }
+
+    &__cta__container {
+        position: relative;
+
+        .home__hero__cta__link-button__container {
+            position: absolute;
+            right: 6rem;
+            bottom: 6rem;
+        }
+    }    
+}
+
+/* -------------------------------------------------------- */
+/* Vespa Analogy Section */ 
+
+.vespa-analogy {
+
+    &__headline {
+        width: 83rem;
+    }
+
+    &__cta__container {
+        position: relative;
+
+        .vespa-analogy__cta__link-button__container {
+            position: absolute;
+            right: 6rem;
+            bottom: 6rem;
+        }
+    } 
+}
+
+/* -------------------------------------------------------- */
+/* What We Do Section */ 
+
+.what-we-do {
+
+    &__headline {
+        width: 95rem;
+    }
+}
+
+
+/* -------------------------------------------------------- */
+/* Business Model Section */
+
+.business-model {
+
+    &__headline {
+        width: 87rem;
+    }
+}
+
+/* -------------------------------------------------------- */
+/* Leaders Section */ 
+
+.leaders {
+
+    .leaders__content__container {
+        display: grid;
+        gap: 3rem;
+        margin-bottom: 4rem;
+        grid-template-areas: 
+        "karla-img  karla-copy separator max-copy  max-img";       
+
+        .leaders__image__karla__container {
+            grid-area: karla-img;
+        }
+
+        .leaders__copy__karla__container {
+            grid-area: karla-copy;
+        }
+
+        .leaders__separator {
+            width: 2px;
+            margin-top: 5rem;
+            background-color: $color__accent;
+        }
+
+        .leaders__copy__max__container {
+            grid-area: max-copy;
+        }
+
+        .leaders__image__max__container {
+            max-width: 26.5rem;
+            grid-area: max-img;
+        }
+
+        .leaders__copy__container {
+            margin-top: 5rem;
+            width: 23.5vw;
+
+            .leaders__name {
+                @include headline_large($color__primary)
+            }
+
+            .leaders__job-title {
+                @include subtitle_large($color__neutral)
+            }
+
+            .leaders__copy {
+                @include copy($color__neutral)
+            }
+        }
+    }
+}
+
+/* -------------------------------------------------------- */
+/* Social Media Section */
+
+.social-media {
+    position: relative;
+
+    &__cta__link-button__container {
+        position: absolute;
+        right: 6rem;
+        bottom: 2.2rem;
+        z-index: 1;
+    }
+
+    &__images__container {
+        display: grid;
+        grid-template-areas: 
+        'post-1   macaws    workers-1   office'
+        'team     locutor   post-2      woman-with-phone';
+
+        .social-media__post-1__image__container {
+            grid-area: post-1;
+        }
+
+        .social-media__macaws__image__container {
+            grid-area: macaws;
+        }
+
+        .social-media__workers-1__image__container {
+            grid-area: workers-1;
+        }
+
+        .social-media__office__image__container {
+            grid-area: office;
+        }
+
+        .social-media__team__image__container {
+            grid-area: team;
+        }
+
+        .social-media__locutor__image__container {
+            grid-area: locutor;
+        }
+
+        .social-media__post-2__image__container {
+            grid-area: post-2;
+        }
+
+        .social-media__woman-with-phone__image__container {
+            grid-area: woman-with-phone;
+        }
+    }
+}
+
+/* -------------------------------------------------------- */
+/* Work Section */
+
+.work {
+
+    .work__projects-grid__container {
+        display: grid;
+        grid-template-areas: 
+        'rac                  direct       nissan-xterra              wrangler-que-es-lo-que-ves'
+        'dq                   don-julio    pollo-campero              wrangler-tag'
+        'dallas-mavericks     budweiser    white-castle               crema-salvadorena'
+        'muenster-meet        miamigo      pollo-campero-billboard    children-s-health'
+        'budweiser-fifa       toyota       greyhound                  senor-rico';
+
+        .work__projects-grid__image__container__rac {
+            grid-area: rac;
+            position: relative;
+
+            .white {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: $color__light;
+                mix-blend-mode: multiply;
+                z-index: 2;
+            }
+
+            .black {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: $color__neutral;
+                mix-blend-mode: saturation;
+                z-index: 1;
+            }
+        }
+
+        .work__projects-grid__image__container__direct {
+            grid-area: direct;
+            position: relative;
+
+            .white {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: $color__light;
+                mix-blend-mode: multiply;
+                z-index: 2;
+            }
+
+            .black {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: $color__neutral;
+                mix-blend-mode: saturation;
+                z-index: 1;
+            }            
+        }
+
+        .work__projects-grid__image__container__nissan-xterra {
+            grid-area: nissan-xterra;
+            position: relative;
+
+            .white {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: $color__light;
+                mix-blend-mode: multiply;
+                z-index: 2;
+            }
+
+            .black {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: $color__neutral;
+                mix-blend-mode: saturation;
+                z-index: 1;
+            } 
+        }
+
+        .work__projects-grid__image__container__wrangler-que-es-lo-que-ves {
+            grid-area: wrangler-que-es-lo-que-ves;
+            position: relative;
+
+            .white {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: $color__light;
+                mix-blend-mode: multiply;
+                z-index: 2;
+            }
+
+            .black {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: $color__neutral;
+                mix-blend-mode: saturation;
+                z-index: 1;
+            } 
+        }
+
+        .work__projects-grid__image__container__dq {
+            grid-area: dq;
+            position: relative;
+
+            .white {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: $color__light;
+                mix-blend-mode: multiply;
+                z-index: 2;
+            }
+
+            .black {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: $color__neutral;
+                mix-blend-mode: saturation;
+                z-index: 1;
+            } 
+        }
+
+        .work__projects-grid__image__container__don-julio {
+            grid-area: don-julio;
+            position: relative;
+
+            .white {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: $color__light;
+                mix-blend-mode: multiply;
+                z-index: 2;
+            }
+
+            .black {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: $color__neutral;
+                mix-blend-mode: saturation;
+                z-index: 1;
+            } 
+        }
+
+        .work__projects-grid__image__container__pollo-campero {
+            grid-area: pollo-campero;
+            position: relative;
+
+            .white {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: $color__light;
+                mix-blend-mode: multiply;
+                z-index: 2;
+            }
+
+            .black {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: $color__neutral;
+                mix-blend-mode: saturation;
+                z-index: 1;
+            } 
+        }
+
+        .work__projects-grid__image__container__wrangler-tag {
+            grid-area: wrangler-tag;
+            position: relative;
+
+            .white {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: $color__light;
+                mix-blend-mode: multiply;
+                z-index: 2;
+            }
+
+            .black {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: $color__neutral;
+                mix-blend-mode: saturation;
+                z-index: 1;
+            } 
+        }
+
+        .work__projects-grid__image__container__dallas-mavericks {
+            grid-area: dallas-mavericks;
+            position: relative;
+
+            .white {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: $color__light;
+                mix-blend-mode: multiply;
+                z-index: 2;
+            }
+
+            .black {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: $color__neutral;
+                mix-blend-mode: saturation;
+                z-index: 1;
+            } 
+        }
+
+        .work__projects-grid__image__container__budweiser {
+            grid-area: budweiser;
+            position: relative;
+
+            .white {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: $color__light;
+                mix-blend-mode: multiply;
+                z-index: 2;
+            }
+
+            .black {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: $color__neutral;
+                mix-blend-mode: saturation;
+                z-index: 1;
+            } 
+        }
+
+        .work__projects-grid__image__container__white-castle {
+            grid-area: white-castle;
+            position: relative;
+
+            .white {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: $color__light;
+                mix-blend-mode: multiply;
+                z-index: 2;
+            }
+
+            .black {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: $color__neutral;
+                mix-blend-mode: saturation;
+                z-index: 1;
+            } 
+        }
+
+        .work__projects-grid__image__container__crema-salvadorena {
+            grid-area: crema-salvadorena;
+            position: relative;
+
+            .white {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: $color__light;
+                mix-blend-mode: multiply;
+                z-index: 2;
+            }
+
+            .black {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: $color__neutral;
+                mix-blend-mode: saturation;
+                z-index: 1;
+            } 
+        }
+
+        .work__projects-grid__image__container__muenster-meet {
+            grid-area: muenster-meet;
+            position: relative;
+
+            .white {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: $color__light;
+                mix-blend-mode: multiply;
+                z-index: 2;
+            }
+
+            .black {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: $color__neutral;
+                mix-blend-mode: saturation;
+                z-index: 1;
+            } 
+        }
+
+        .work__projects-grid__image__container__miamigo {
+            grid-area: miamigo;
+            position: relative;
+
+            .white {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: $color__light;
+                mix-blend-mode: multiply;
+                z-index: 2;
+            }
+
+            .black {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: $color__neutral;
+                mix-blend-mode: saturation;
+                z-index: 1;
+            } 
+        }
+
+        .work__projects-grid__image__container__pollo-campero-billboard {
+           grid-area: pollo-campero-billboard;
+           position: relative;
+
+            .white {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: $color__light;
+                mix-blend-mode: multiply;
+                z-index: 2;
+            }
+
+            .black {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: $color__neutral;
+                mix-blend-mode: saturation;
+                z-index: 1;
+            }  
+        }
+
+        .work__projects-grid__image__container__children-s-health {
+            grid-area: children-s-health;
+            position: relative;
+
+            .white {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: $color__light;
+                mix-blend-mode: multiply;
+                z-index: 2;
+            }
+
+            .black {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: $color__neutral;
+                mix-blend-mode: saturation;
+                z-index: 1;
+            } 
+        }
+
+        .work__projects-grid__image__container__budweiser-fifa {
+            grid-area: budweiser-fifa;
+            position: relative;
+
+            .white {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: $color__light;
+                mix-blend-mode: multiply;
+                z-index: 2;
+            }
+
+            .black {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: $color__neutral;
+                mix-blend-mode: saturation;
+                z-index: 1;
+            } 
+        }
+
+        .work__projects-grid__image__container__toyota {
+            grid-area: toyota;
+            position: relative;
+
+            .white {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: $color__light;
+                mix-blend-mode: multiply;
+                z-index: 2;
+            }
+
+            .black {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: $color__neutral;
+                mix-blend-mode: saturation;
+                z-index: 1;
+            } 
+        }
+
+        .work__projects-grid__image__container__greyhound {
+            grid-area: greyhound;
+            position: relative;
+
+            .white {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: $color__light;
+                mix-blend-mode: multiply;
+                z-index: 2;
+            }
+
+            .black {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: $color__neutral;
+                mix-blend-mode: saturation;
+                z-index: 1;
+            } 
+        }
+
+        .work__projects-grid__image__container__senor-rico {
+            grid-area: senor-rico;
+            position: relative;
+
+            .white {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: $color__light;
+                mix-blend-mode: multiply;
+                z-index: 2;
+            }
+
+            .black {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: $color__neutral;
+                mix-blend-mode: saturation;
+                z-index: 1;
+            } 
+        }
+    }
+}
+
+/* -------------------------------------------------------- */
+/* CTA Section */
+
+.cta {
+
+    .cta__elements__container {
+        position: relative;
+        display: flex;
+        gap: 7rem;
+        padding: 14rem 6rem 5rem;
+        
+        .cta__copy__container {
+            width: 158.9rem;
+
+            .cta__copy__ul {
+
+               .cta__copy__first__item {
+                width: 36rem;
+               }
+
+               .cta__copy__last__item {
+                width: 44rem;
+               }
+            }
+
+            .cta__copy {
+                @include subtitle_large($color__neutral)
+            }
+        }
+
+        .cta__copy-blue {
+            @include subtitle_large($color__primary)
+        }
+
+        .cta__divider-line {
+            background-color: $color__neutral;
+            width: .125rem;
+            height: auto;
+        }
+
+        .cta__form__container {
+            width: 100%;
+
+            .cta__form {
+                width: 88%;
+
+                .cta__form__btn {
+                    position: absolute;
+                    right: 5rem;
+                    bottom: 7rem;
+                }
+            }
+        }
+    }
+}
