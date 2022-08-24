@@ -92,7 +92,7 @@ export default function Home() {
       <Header />
 
       <main>
-
+              
         <section className="home__hero">
           <Headline>
             <h2 className='headline home__hero__headline'>Still on the fence about targeting the Hispanic market?</h2>
@@ -101,13 +101,14 @@ export default function Home() {
             imgHeight="partial"
             src={heroImage}
           />
+
           <div className="cta__container home__hero__cta__container">
             <h2 className="cta__text">Hispanics are playing a major role in driving U.S. population growth.<span className="blue"> Don't wait any longer.</span> </h2>
             <div className="home__hero__cta__link-button__container">
               <LinkButton
                 href="#cta"
                 src={contactBtnLargeDefault}
-              />
+              />              
             </div>
           </div>
         </section>
@@ -190,10 +191,10 @@ export default function Home() {
 
         <section className='social-media'>
           <div className="social-media__cta__link-button__container">                                        
-                <LinkButtonTargetBlank
-                  href='https://www.instagram.com/co.jonescreative/'
-                  src={likeUsBtnLargeDefault}
-                />                          
+            <LinkButtonTargetBlank
+              href='https://www.instagram.com/co.jonescreative/'
+              src={likeUsBtnLargeDefault}
+            />                          
           </div>
           <div className="social-media__images__container">            
             <div className="social-media__post-1__image__container">
@@ -266,7 +267,7 @@ export default function Home() {
             src={workImageLarge}
             objectPosition='bottom'
           />
-
+ 
           <div className="work__projects-grid__container">
 
             <div className="work__projects-grid__image__container__rac">
@@ -477,6 +478,12 @@ export default function Home() {
           <Headline>
             <h2 className='headline-blue'>Get your <br /> Co.Jones Merch!</h2>
           </Headline>
+          <div className="merch__cta__link-button__container">
+            <LinkButtonTargetBlank
+              href='https://www.bonfire.com/store/show-cojones/'
+              src={shopBtnLargeDefault}
+            />
+          </div>
           <BackgroundImage
             imgHeight="full"
             src={cojonesTshirtImageLarge}

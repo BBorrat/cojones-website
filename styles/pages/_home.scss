@@ -737,6 +737,20 @@
 }
 
 /* -------------------------------------------------------- */
+/* Merch Section */
+
+.merch {
+    position: relative;
+
+    &__cta__link-button__container {
+        position: absolute;
+        right: 6rem;
+        bottom: 6rem;
+        z-index: 2;
+    }
+}
+
+/* -------------------------------------------------------- */
 /* CTA Section */
 
 .cta {
@@ -780,11 +794,11 @@
             width: 100%;
 
             .cta__form {
-                width: 88%;
+                width: 86%;
 
                 .cta__form__btn {
                     position: absolute;
-                    right: 5rem;
+                    right: 6rem;
                     bottom: 7rem;
                 }
             }
