@@ -24,10 +24,24 @@
     &__cta__container {
         position: relative;
 
+        .home__hero__cta__text {
+            width: 102rem;
+        }
+
         .home__hero__cta__link-button__container {
             position: absolute;
             right: 6rem;
             bottom: 6rem;
+        }
+
+        .home__hero__cta__arrow__container {
+            position: absolute;
+            display: flex;
+            justify-content: flex-end;
+            right: 20.6rem;
+            bottom: 5rem;
+            left: 41.3rem;
+            overflow: hidden;
         }
     }    
 }

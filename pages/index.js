@@ -3,9 +3,11 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 // Components
+import { Header } from '../components/Header'
 import { Headline } from '../components/Headline'
 import { BackgroundImage } from '../components/BackgroundImage'
-import { Header } from '../components/Header'
+import { LinkButton } from '../components/LinkButton'
+import { LinkButtonTargetBlank } from '../components/LinkButtonTargetBlank'
 import { Footer } from '../components/Footer'
 
 // Images
@@ -45,6 +47,7 @@ import budweiserFifa from '../public/images/budweiser-fifa.jpg'
 import toyota from '../public/images/toyota.jpg'
 import greyhound from '../public/images/greyhound.jpg'
 import senorRico from '../public/images/senor-rico.jpg'
+import ctaArrow from '../public/images/cta-arrow.svg'
 
 // Buttons large images
 import contactBtnLargeDefault from '../public/images/btn-large-contact-default.svg'
@@ -75,8 +78,7 @@ import shopBtnSmallDefault from '../public/images/btn-small-shop-default.svg'
 import shopBtSmalldHover from '../public/images/btn-small-shop-hover.svg'
 import submitBtnSmallDefault from '../public/images/btn-small-submit-default.svg'
 import submitBtnSmallHover from '../public/images/btn-small-submit-hover.svg'
-import { LinkButton } from '../components/LinkButton'
-import { LinkButtonTargetBlank } from '../components/LinkButtonTargetBlank'
+
 
 // Website
 export default function Home() {
@@ -92,7 +94,7 @@ export default function Home() {
       <Header />
 
       <main>
-              
+
         <section className="home__hero">
           <Headline>
             <h2 className='headline home__hero__headline'>Still on the fence about targeting the Hispanic market?</h2>
@@ -103,12 +105,21 @@ export default function Home() {
           />
 
           <div className="cta__container home__hero__cta__container">
-            <h2 className="cta__text">Hispanics are playing a major role in driving U.S. population growth.<span className="blue"> Don't wait any longer.</span> </h2>
+            <h2 className="cta__text home__hero__cta__text">Hispanics are playing a major role in driving U.S. population growth.<span className="blue"> Don't wait any longer.</span> </h2>
             <div className="home__hero__cta__link-button__container">
               <LinkButton
                 href="#cta"
                 src={contactBtnLargeDefault}
-              />              
+              />
+            </div>
+            <div className='home__hero__cta__arrow__container'>
+              <div className="home__hero__cta__arrow">
+                <Image
+                  src={ctaArrow}
+                  layout='fixed'
+                />
+              </div>
+
             </div>
           </div>
         </section>
@@ -190,13 +201,13 @@ export default function Home() {
         </section>
 
         <section className='social-media'>
-          <div className="social-media__cta__link-button__container">                                        
+          <div className="social-media__cta__link-button__container">
             <LinkButtonTargetBlank
               href='https://www.instagram.com/co.jonescreative/'
               src={likeUsBtnLargeDefault}
-            />                          
+            />
           </div>
-          <div className="social-media__images__container">            
+          <div className="social-media__images__container">
             <div className="social-media__post-1__image__container">
               <Image
                 className='social-media__post-1__image'
@@ -267,7 +278,7 @@ export default function Home() {
             src={workImageLarge}
             objectPosition='bottom'
           />
- 
+
           <div className="work__projects-grid__container">
 
             <div className="work__projects-grid__image__container__rac">
@@ -511,7 +522,7 @@ export default function Home() {
               </ul>
               <h3 className='cta__copy'>If you answered <span className='text-blue'>yes</span> to any of these questions, <span className='text-blue'>call us.</span></h3>
               <br />
-              <br />          
+              <br />
               <a className='cta__copy-blue' href="tel://+214-538-8692">214-538-8692</a><span className='cta__copy-blue'> &nbsp; | &nbsp; </span>
               <a className='cta__copy-blue' href="tel://+210-710-3109">210-710-3109</a>
             </div>
@@ -519,7 +530,7 @@ export default function Home() {
             <div className='cta__divider-line'></div>
 
             <div className="cta__form__container">
-              
+
               <form action="" className='cta__form'>
 
                 <label for="name">Your name*</label>
@@ -533,7 +544,7 @@ export default function Home() {
 
                 <label for="text">How can we help?</label>
                 <input type="text" id="text" name="text" placeholder='A brief description here' />
-                
+
                 <button type="submit" className='cta__form__btn'>
                   <Image
                     src={submitBtnLargeDefault}
