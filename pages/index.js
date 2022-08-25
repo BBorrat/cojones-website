@@ -103,7 +103,6 @@ export default function Home() {
             imgHeight="partial"
             src={heroImage}
           />
-
           <div className="cta__container home__hero__cta__container">
             <h2 className="cta__text home__hero__cta__text">Hispanics are playing a major role in driving U.S. population growth.<span className="blue"> Don't wait any longer.</span> </h2>
             <div className="home__hero__cta__link-button__container">
@@ -119,7 +118,6 @@ export default function Home() {
                   layout='fixed'
                 />
               </div>
-
             </div>
           </div>
         </section>
@@ -139,6 +137,14 @@ export default function Home() {
                 href="#cta"
                 src={contactBtnLargeDefault}
               />
+            </div>
+            <div className='vespa-analogy__cta__arrow__container'>
+              <div className="vespa-analogy__cta__arrow">
+                <Image
+                  src={ctaArrow}
+                  layout='fixed'
+                />
+              </div>
             </div>
           </div>
         </section>
@@ -207,6 +213,14 @@ export default function Home() {
               src={likeUsBtnLargeDefault}
             />
           </div>
+          <div className='social-media__cta__arrow__container'>
+              <div className="social-media__cta__arrow">
+                <Image
+                  src={ctaArrow}
+                  layout='fixed'
+                />
+              </div>
+            </div>
           <div className="social-media__images__container">
             <div className="social-media__post-1__image__container">
               <Image
