@@ -33,49 +33,43 @@ sass/
 |
 --------------------------------------------------------------*/
 
-/* abstracts */ 
-@import 'abstracts/variables';
-@import 'abstracts/mixins';
+/* abstracts */
+@import "abstracts/variables";
+@import "abstracts/mixins";
 
 /*-----------------------------------------*/
 
-/* vendors */ 
+/* vendors */
 
 /*-----------------------------------------*/
 
-/* base */ 
-@import 'base/reset';
-@import 'base/modifiers';
-@import 'base/typography';
+/* base */
+@import "base/reset";
+@import "base/modifiers";
+@import "base/typography";
 
 /*-----------------------------------------*/
 
-/* layout */ 
-@import 'layout/forms';
+/* layout */
+@import "layout/forms";
 
 /*-----------------------------------------*/
 
-/* components */ 
-@import 'components/header.module';
-@import 'components/Headline.module';
-@import 'components/BackgroundImage.module';
-@import 'components/footer.module';
-@import 'components/LinkButton.module';
-@import 'components/LinkButtonTargetBlank.module';
+/* components */
+@import "components/header.module";
+@import "components/Headline.module";
+@import "components/BackgroundImage.module";
+@import "components/footer.module";
+@import "components/LinkButton.module";
+@import "components/LinkButtonTargetBlank.module";
 
 /*-----------------------------------------*/
 
-/* pages */ 
+/* pages */
 @import "pages/home";
 
 /*-----------------------------------------*/
 
-/* themes */ 
+/* themes */
 
 /*-----------------------------------------*/
-
-
-
-
-
-

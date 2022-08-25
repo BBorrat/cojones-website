@@ -1,63 +1,63 @@
 /* Typography */
 
 @mixin headline_large($color) {
-    font-family: $font__heading;
-    font-size: 4.5625rem;
-    line-height: 4.1875rem;
-    letter-spacing: -.1rem;
-    color: $color;
+  font-family: $font__heading;
+  font-size: 4.5625rem;
+  line-height: 4.1875rem;
+  letter-spacing: -0.1rem;
+  color: $color;
 }
 
 @mixin headline_mid($color) {
-    font-family: $font__heading;
-    font-size: 3rem;
-    line-height: 2.875rem;
-    letter-spacing: -.1rem;
-    color: $color;
+  font-family: $font__heading;
+  font-size: 3rem;
+  line-height: 2.875rem;
+  letter-spacing: -0.1rem;
+  color: $color;
 }
 
 @mixin headline_small($color) {
-    font-family: $font__heading;
-    font-size: 2.5rem;
-    line-height: 2.4375rem;
-    letter-spacing: -.1rem;
-    color: $color;
+  font-family: $font__heading;
+  font-size: 2.5rem;
+  line-height: 2.4375rem;
+  letter-spacing: -0.1rem;
+  color: $color;
 }
 
 @mixin subtitle_large($color) {
-    font-family: $font__heading;
-    font-size: 2.375rem;
-    line-height: 2.375rem;
-    letter-spacing: -.05rem;
-    color: $color;
+  font-family: $font__heading;
+  font-size: 2.375rem;
+  line-height: 2.375rem;
+  letter-spacing: -0.05rem;
+  color: $color;
 }
 
 @mixin subtitle_mid($color) {
-    font-family: $font__heading;
-    font-size: 1.5625rem;
-    line-height: 1.5625rem;
-    letter-spacing: -.05rem;
-    color: $color;
+  font-family: $font__heading;
+  font-size: 1.5625rem;
+  line-height: 1.5625rem;
+  letter-spacing: -0.05rem;
+  color: $color;
 }
 
 @mixin subtitle_small($color) {
-    font-family: $font__heading;
-    font-size: 1.3125rem;
-    line-height: 1.3125rem;
-    letter-spacing: -.05rem;
-    color: $color;
+  font-family: $font__heading;
+  font-size: 1.3125rem;
+  line-height: 1.3125rem;
+  letter-spacing: -0.05rem;
+  color: $color;
 }
 
 @mixin copy($color) {
-    font-family: $font__text;
-    font-size: .9375rem;
-    line-height: 1.4375rem;
-    color: $color;
+  font-family: $font__text;
+  font-size: 0.9375rem;
+  line-height: 1.4375rem;
+  color: $color;
 }
 
 @mixin caption($color) {
-    font-family: $font__text;
-    font-size: 0.8125rem;
-    line-height: 1.4375rem;
-    color: $color;
+  font-family: $font__text;
+  font-size: 0.8125rem;
+  line-height: 1.4375rem;
+  color: $color;
 }

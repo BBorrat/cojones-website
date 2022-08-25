@@ -1,25 +1,25 @@
 .image__container-partial {
-    position: relative;
-    z-index: 1;
-    height: calc(75vh - 5.5rem);
+  position: relative;
+  z-index: 1;
+  height: calc(75vh - 5.5rem);
 
-    .image {
-        height: 100%;
-    }
+  .image {
+    height: 100%;
+  }
 }
 
 .image__container-full {
-    position: relative;
-    z-index: 1;
-    height: calc(100vh - 5.5rem);
+  position: relative;
+  z-index: 1;
+  height: calc(100vh - 5.5rem);
 }
 
 .image__container-xl {
-    position: relative;
-    z-index: 1;
-    height: 130vh;
+  position: relative;
+  z-index: 1;
+  height: 130vh;
 
-    .image {
-        height: 100%;
-    }
+  .image {
+    height: 100%;
+  }
 }

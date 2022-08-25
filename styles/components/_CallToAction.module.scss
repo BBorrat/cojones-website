@@ -1,9 +1,8 @@
 .cta__text__conntainer {
-    height: 25vh;
+  height: 25vh;
 
-    .cta__text {
-        @include headline_large($color__neutral);
-        padding: 2.3rem 6rem 0;        
-    }
-
+  .cta__text {
+    @include headline_large($color__neutral);
+    padding: 2.3rem 6rem 0;
+  }
 }
