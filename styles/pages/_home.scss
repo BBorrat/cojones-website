@@ -1,16 +1,3 @@
-.cta__container {
-  height: 25vh;
-
-  .cta__text {
-    @include headline_large($color__neutral);
-    padding: 2.3rem 6rem 0;
-
-    .blue {
-      color: $color__primary;
-    }
-  }
-}
-
 /* -------------------------------------------------------- */
 /* Home Hero Section */
 
@@ -18,11 +5,12 @@
   padding-top: 5.5rem;
 
   &__headline {
-    width: 74rem;
+    max-width: 74rem;
   }
 
   &__cta__container {
     position: relative;
+    height: 17.7rem;
 
     .home__hero__cta__text {
       width: 102rem;
@@ -40,7 +28,7 @@
       justify-content: flex-end;
       top: 8.2rem;
       right: 20.6rem;
-      left: 41.3rem;
+      left: 40.8rem;
       overflow: hidden;
     }
   }
@@ -51,11 +39,12 @@
 
 .vespa-analogy {
   &__headline {
-    width: 83rem;
+    max-width: 83rem;
   }
 
   &__cta__container {
     position: relative;
+    height: 17.7rem;
 
     .vespa-analogy__cta__link-button__container {
       position: absolute;
@@ -80,7 +69,7 @@
 
 .what-we-do {
   &__headline {
-    width: 95rem;
+    max-width: 95rem;
   }
 }
 
@@ -89,7 +78,7 @@
 
 .business-model {
   &__headline {
-    width: 87rem;
+    max-width: 87rem;
   }
 }
 
@@ -99,6 +88,7 @@
 .leaders {
   .leaders__content__container {
     display: grid;
+    width: 100%;
     gap: 3rem;
     margin-bottom: 4rem;
     grid-template-areas: "karla-img  karla-copy separator max-copy  max-img";
@@ -128,7 +118,6 @@
 
     .leaders__copy__container {
       margin-top: 5rem;
-      width: 23.5vw;
 
       .leaders__name {
         @include headline_large($color__primary);
@@ -150,6 +139,7 @@
 
 .social-media {
   position: relative;
+  overflow: hidden;
 
   &__cta__link-button__container {
     position: absolute;
@@ -792,11 +782,11 @@
 
       .cta__copy__ul {
         .cta__copy__first__item {
-          width: 36rem;
+          max-width: 36rem;
         }
 
         .cta__copy__last__item {
-          width: 44rem;
+          max-width: 44rem;
         }
       }
 
@@ -826,6 +816,30 @@
           right: 6rem;
           bottom: 7rem;
         }
+      }
+    }
+  }
+}
+
+/* -------------------------------------------------------- */
+/* Media Queries */
+
+@include media-down(3xl) {
+  .home__hero {
+
+    &__cta__container {
+
+      .home__hero__cta__text {
+        width: 75rem;
+      }
+
+      .home__hero__cta__link-button__container {
+        top: 9.5rem;
+      }
+
+      .home__hero__cta__arrow__container {
+        top: 12.3rem;
+        left: 6.2rem;
       }
     }
   }

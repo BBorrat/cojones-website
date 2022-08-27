@@ -108,7 +108,7 @@ export default function Home() {
               growth.<span className="blue"> Don't wait any longer.</span>{" "}
             </h2>
             <div className="home__hero__cta__link-button__container">
-              <LinkButton href="#cta" src={contactBtnLargeDefault} srcHover={likeUsBtnLargeDefault} />
+              <LinkButton href="#cta" src={contactBtnLargeDefault} srcHover={contactBtnLargeHover} />
             </div>
             <div className="home__hero__cta__arrow__container">
               <div className="home__hero__cta__arrow">
@@ -132,7 +132,7 @@ export default function Home() {
               our way around!
             </h2>
             <div className="vespa-analogy__cta__link-button__container">
-              <LinkButton href="#cta" src={contactBtnLargeDefault} />
+              <LinkButton href="#cta" src={contactBtnLargeDefault} srcHover={contactBtnLargeHover} />
             </div>
             <div className="vespa-analogy__cta__arrow__container">
               <div className="vespa-analogy__cta__arrow">
@@ -254,7 +254,7 @@ export default function Home() {
           <div className="social-media__cta__link-button__container">
             <LinkButtonTargetBlank
               href="https://www.instagram.com/co.jonescreative/"
-              src={likeUsBtnLargeDefault}
+              src={likeUsBtnLargeDefault} srcHover={likeUsBtnLargeHover}
             />
           </div>
           <div className="social-media__cta__arrow__container">
@@ -554,7 +554,7 @@ export default function Home() {
           <div className="merch__cta__link-button__container">
             <LinkButtonTargetBlank
               href="https://www.bonfire.com/store/show-cojones/"
-              src={shopBtnLargeDefault}
+              src={shopBtnLargeDefault} srcHover={shopBtnLargeHover}
             />
           </div>
           <BackgroundImage imgHeight="full" src={cojonesTshirtImageLarge} />

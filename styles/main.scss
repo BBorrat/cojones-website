@@ -7,6 +7,7 @@ sass/
 |– abstracts/
 |   |– _variables.scss           # Sass Variables
 |   |– _mixins.scss              # Sass Mixins
+|   |- _media-queries.scss       # Media Queries
 |
 |– vendors/
 |
@@ -22,9 +23,10 @@ sass/
 |   |– header                   # Header component styles
 |   |– Headline                 # Headline component styles
 |   |– BackgroundImage          # Background image component styles
-|   |– footer                   # footer component styles
+|   |- CallToAction             # Call to action component stykes
 |   |– LinkButton               # Link buttons component styles
-|   |– LinkButtonTargetBlank    # Link buttons with target _blank component styles
+|   |– LinkButtonTargetBlank    # Link buttons with target blank component styles
+|   |– footer                   # footer component styles
 |
 |– pages/
 |   |– _home.scss               # Home specific styles
@@ -36,6 +38,7 @@ sass/
 /* abstracts */
 @import "abstracts/variables";
 @import "abstracts/mixins";
+@import "abstracts/media-queries";
 
 /*-----------------------------------------*/
 
@@ -59,9 +62,10 @@ sass/
 @import "components/header.module";
 @import "components/Headline.module";
 @import "components/BackgroundImage.module";
-@import "components/footer.module";
+@import "components/CallToAction.module";
 @import "components/LinkButton.module";
 @import "components/LinkButtonTargetBlank.module";
+@import "components/footer.module";
 
 /*-----------------------------------------*/
 

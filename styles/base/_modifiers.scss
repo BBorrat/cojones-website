@@ -2,6 +2,12 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  max-width: 1800px;
+  margin: 0 auto;
+  background-color: $color__light;
+}
+
 .text-blue {
   color: $color__primary;
 }
