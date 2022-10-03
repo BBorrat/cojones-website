@@ -19,22 +19,104 @@
     }
 
     .headline__container {
+    
       .headline {
         position: relative;
         @include headline_large($color__light);
+        padding: 1.9rem 0rem 1.1rem 6rem;
         text-shadow: 4px 4px 6px rgba(39, 42, 43, 0.65);
-        padding: 1.9rem 6rem 1.1rem;
-        margin: 0;
         z-index: 5;
       }
 
       .headline-blue {
         position: relative;
         @include headline_large($color__primary);
+        padding: 1.9rem 0rem 1.1rem 6rem;
         text-shadow: 4px 4px 6px rgba(39, 42, 43, 0.65);
-        padding: 1.9rem 6rem 1.1rem;
-        margin: 0;
         z-index: 5;
+      }
+    }
+  }
+}
+
+/* -------------------------------------------------------- */
+/* Media Queries */
+
+@include media-down(xxxl) {
+  .headline__background__container {
+  
+    .headline__background {
+
+      .headline__container {
+
+        .headline {
+          @include headline_mid($color__light);
+        }
+  
+        .headline-blue {
+          @include headline_mid($color__primary);
+
+        }
+      }
+    }
+  }
+}
+
+@include media-down(lg) {
+
+  .headline__background__container {
+
+    .headline__background {
+
+      .headline__container {
+
+        .headline {
+          padding: 1.9rem 4rem 1.1rem;
+        }
+
+        .headline-blue {
+          padding: 1.9rem 4rem 1.1rem;
+        }
+      }
+    }
+  }
+}
+
+@include media-down(md) {
+  .headline__background__container {
+  
+    .headline__background {
+  
+      .headline__container {
+
+        .headline {
+          @include headline_small($color__light);
+        }
+  
+        .headline-blue {
+          @include headline_small($color__primary);
+        }
+      }
+    }
+  }
+}
+
+@include media-down(sm) {
+  .headline__background__container {
+  
+    .headline__background {
+ 
+      .headline__container {
+
+        .headline {
+          @include headline_xsm($color__light);
+          padding: 1.9rem 1.6rem 1.1rem;
+        }
+  
+        .headline-blue {
+          @include headline_xsm($color__primary);
+          padding: 1.9rem 1.6rem 1.1rem;
+        }
       }
     }
   }

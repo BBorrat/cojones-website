@@ -1,11 +1,14 @@
 html {
   scroll-behavior: smooth;
+  background-color: $color__light;
 }
 
 body {
-  max-width: 1800px;
+  max-width: 1980px;
+  min-width: 300px;
   margin: 0 auto;
   background-color: $color__light;
+  box-shadow: 0 0px 100px #97897d;
 }
 
 .text-blue {
@@ -22,4 +25,8 @@ body {
 
 .display-block {
   display: block;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }

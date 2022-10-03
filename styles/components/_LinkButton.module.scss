@@ -1,6 +1,40 @@
 .cta {
+
   &__button__image__container {
     display: inline-block;
     cursor: pointer;
+  }
+}
+
+/* -------------------------------------------------------- */
+/* Media Queries */
+
+@include media-down(xxxl) {
+
+  .cta {
+
+    &__button__image__container {
+      width: 11rem;
+    }
+  }
+}
+
+@include media-down(xl) {
+
+  .cta {
+
+    &__button__image__container {
+      width: 9.6rem;
+    }
+  }
+}
+
+@include media-down(md) {
+
+  .cta {
+
+    &__button__image__container {
+      width: 8.7rem;
+    }
   }
 }

@@ -7,7 +7,7 @@ export function LinkButtonTargetBlank(props) {
   return (
     <Link href={props.href}>
       <a target="_blank">
-        <div className="cta__button__image__container" ref={hoverRef}>
+        <div className="cta__target__button__image__container" ref={hoverRef}>
         {isHovered && props.srcHover ?
           <Image src={props.srcHover}/>
         :

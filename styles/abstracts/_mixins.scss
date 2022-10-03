@@ -24,6 +24,22 @@
   color: $color;
 }
 
+@mixin headline_xsm($color) {
+  font-family: $font__heading;
+  font-size: 2.2rem;
+  line-height: 2.2rem;
+  letter-spacing: -0.1rem;
+  color: $color;
+}
+
+@mixin headline_xxsm($color) {
+  font-family: $font__heading;
+  font-size: 1.9rem;
+  line-height: 1.9rem;
+  letter-spacing: -0.1rem;
+  color: $color;
+}
+
 @mixin subtitle_large($color) {
   font-family: $font__heading;
   font-size: 2.375rem;
@@ -45,6 +61,22 @@
   font-size: 1.3125rem;
   line-height: 1.3125rem;
   letter-spacing: -0.05rem;
+  color: $color;
+}
+
+@mixin subtitle_xsm($color) {
+  font-family: $font__heading;
+  font-size: 1.0326rem;
+  line-height: 1.0326rem;
+  letter-spacing: -0.0217rem;
+  color: $color;
+}
+
+@mixin subtitle_xxs($color) {
+  font-family: $font__heading;
+  font-size: 0.9375rem;
+  line-height: 0.9375rem;
+  letter-spacing: -0.0217rem;
   color: $color;
 }
 

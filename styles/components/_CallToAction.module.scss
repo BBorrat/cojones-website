@@ -10,3 +10,48 @@
     color: $color__primary;
   }
 }
+
+/* -------------------------------------------------------- */
+/* Media Queries */
+
+@include media-down(xxxl) {
+
+  .cta__container {
+  
+    .cta__text {
+      @include headline_mid($color__neutral);
+    }
+
+  }
+}
+
+@include media-down(lg) {
+
+  .cta__container {
+
+    .cta__text {
+      padding: 2.3rem 4rem 0;
+    }
+  }
+}
+
+@include media-down(md) {
+
+  .cta__container {
+
+    .cta__text {
+      @include headline_small($color__neutral)
+    }
+  }  
+}
+
+@include media-down(sm) {
+
+  .cta__container {
+
+    .cta__text {
+      @include headline_xsm($color__neutral);
+      padding: 1.9rem 1.6rem 1.1rem;
+    }
+  }  
+}

@@ -5,14 +5,18 @@ export function Header() {
   return (
     <header className="header">
       <div className="header__items__container">
-        <Image
-          className="header__logo"
-          src={logoCojones}
-          alt="Co.Jones logotype"
-        />
-        <h1 className="header__value__proposal">
-          Independent Hispanic Ad Agency
-        </h1>
+        <div class="header__logo__container">
+          <Image
+            className="header__logo"
+            src={logoCojones}
+            alt="Co.Jones logotype"
+          />
+        </div>
+        <div className="header__value__proposal__container">
+          <h1 className="header__value__proposal__copy">
+            Independent Hispanic Ad Agency
+          </h1>
+        </div>
       </div>
     </header>
   );

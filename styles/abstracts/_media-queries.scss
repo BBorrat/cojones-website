@@ -5,8 +5,8 @@ $breakpoints: (
      md:  769px,
      lg:  992px,
      xl: 1200px,
-    2xl: 1388px,
-    3xl: 1680px,
+    xxl: 1388px,
+    xxxl: 1680px,
 );
 
 @mixin media-down($breakpoint) {

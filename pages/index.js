@@ -9,6 +9,7 @@ import { BackgroundImage } from "../components/BackgroundImage";
 import { LinkButton } from "../components/LinkButton";
 import { LinkButtonTargetBlank } from "../components/LinkButtonTargetBlank";
 import { Footer } from "../components/Footer";
+import { WorkModal } from "../components/WorkModal";
 
 // Images
 import heroImage from "../public/images/hero_image.jpg";
@@ -59,26 +60,6 @@ import shopBtnLargeHover from "../public/images/btn-large-shop-hover.svg";
 import submitBtnLargeDefault from "../public/images/btn-large-submit-default.svg";
 import submitBtnLargeHover from "../public/images/btn-large-submit-hover.svg";
 
-// Buttons mid images
-import contactBtnMidDefault from "../public/images/btn-mid-contact-default.svg";
-import contactBtnMidHover from "../public/images/btn-mid-contact-hover.svg";
-import likeUsBtnMidDefault from "../public/images/btn-mid-like-us-default.svg";
-import likeUsBtMideHover from "../public/images/btn-mid-like-us-hover.svg";
-import shopBtnMidDefault from "../public/images/btn-mid-shop-default.svg";
-import shopBtnMidHover from "../public/images/btn-mid-shop-hover.svg";
-import submitBtnMidDefault from "../public/images/btn-mid-submit-default.svg";
-import submitBtnMidHover from "../public/images/btn-mid-submit-hover.svg";
-
-// Buttons small images
-import contactBtnSmallDefault from "../public/images/btn-small-contact-default.svg";
-import contactBtnSmallHover from "../public/images/btn-small-contact-hover.svg";
-import likeUsBtnSmallDefault from "../public/images/btn-small-like-us-default.svg";
-import likeUsBtSmalleHover from "../public/images/btn-small-like-us-hover.svg";
-import shopBtnSmallDefault from "../public/images/btn-small-shop-default.svg";
-import shopBtSmalldHover from "../public/images/btn-small-shop-hover.svg";
-import submitBtnSmallDefault from "../public/images/btn-small-submit-default.svg";
-import submitBtnSmallHover from "../public/images/btn-small-submit-hover.svg";
-
 // Website
 export default function Home() {
   return (
@@ -95,6 +76,7 @@ export default function Home() {
       <Header />
 
       <main>
+
         <section className="home__hero">
           <Headline>
             <h2 className="headline home__hero__headline">
@@ -105,7 +87,7 @@ export default function Home() {
           <div className="cta__container home__hero__cta__container">
             <h2 className="cta__text home__hero__cta__text">
               Hispanics are playing a major role in driving U.S. population
-              growth.<span className="blue"> Don't wait any longer.</span>{" "}
+              growth.<span className="blue home__hero__cta__text__end"> Don't wait any longer.</span>{" "}
             </h2>
             <div className="home__hero__cta__link-button__container">
               <LinkButton href="#cta" src={contactBtnLargeDefault} srcHover={contactBtnLargeHover} />
@@ -127,7 +109,7 @@ export default function Home() {
           </Headline>
           <BackgroundImage imgHeight="partial" src={vespaAnalogyImage} />
           <div className="cta__container vespa-analogy__cta__container">
-            <h2 className="cta__text">
+            <h2 className="cta__text vespa-analogy__cta__text">
               <span className="blue">Give us a test ride!</span> <br /> We know
               our way around!
             </h2>
@@ -168,8 +150,11 @@ export default function Home() {
             <div className="leaders__image__karla__container">
               <Image
                 className="leaders__image__karla"
-                src={karlaImage}
+                src={karlaImage}            
                 alt="Karla Armendáriz image"
+                layout="fill"
+                objectFit="contain"
+                objectPosition="top left"
               />
             </div>
             <div className="leaders__copy__container leaders__copy__karla__container">
@@ -205,10 +190,9 @@ export default function Home() {
               </p>
             </div>
             <div className="leaders__separator"></div>
-            <div className="leaders__copy__container">
+            <div className="leaders__copy__container leaders__copy__max__container">
               <h3 className="leaders__name text-align-right">
-                {" "}
-                <br /> Max Lefeld
+                Max Lefeld
               </h3>
               <h4 className="leaders__job-title text-align-right">
                 founder & creative director
@@ -243,8 +227,11 @@ export default function Home() {
             <div className="leaders__image__max__container">
               <Image
                 className="leaders__image__max"
-                src={maxImage}
+                src={maxImage}            
                 alt="Max Lefeld image"
+                layout="fill"
+                objectFit="contain"
+                objectPosition="top right"
               />
             </div>
           </div>
@@ -330,7 +317,7 @@ export default function Home() {
                 Actions speak louder than words.
               </span>{" "}
               <br /> Let our work do the talking. <br /> From global accounts to
-              local start-ups, <br /> from national TV spots to a social media
+              local start-ups from national TV spots to a social media
               post. <br /> We are extremely proud of the vast experience working
               with our amazing clients.
             </h2>
@@ -343,7 +330,8 @@ export default function Home() {
           />
 
           <div className="work__projects-grid__container">
-            <div className="work__projects-grid__image__container__rac">
+          
+            {/* <div className="work__projects-grid__image__container__rac cursor-pointer">
               <div className="white"></div>
               <div className="black"></div>
               <Image
@@ -351,9 +339,13 @@ export default function Home() {
                 src={rac}
                 layout="responsive"
               />
-            </div>
+            </div> */}
+            <WorkModal 
+             projectsGridImgContainer={"rac"}
+             projectsGridImgSrc={rac}
+            />
 
-            <div className="work__projects-grid__image__container__direct">
+            <div className="work__projects-grid__image__container__direct cursor-pointer">
               <div className="white"></div>
               <div className="black"></div>
               <Image
@@ -363,7 +355,7 @@ export default function Home() {
               />
             </div>
 
-            <div className="work__projects-grid__image__container__nissan-xterra">
+            <div className="work__projects-grid__image__container__nissan-xterra cursor-pointer">
               <div className="white"></div>
               <div className="black"></div>
               <Image
@@ -373,7 +365,7 @@ export default function Home() {
               />
             </div>
 
-            <div className="work__projects-grid__image__container__wrangler-que-es-lo-que-ves">
+            <div className="work__projects-grid__image__container__wrangler-que-es-lo-que-ves cursor-pointer">
               <div className="white"></div>
               <div className="black"></div>
               <Image
@@ -383,7 +375,7 @@ export default function Home() {
               />
             </div>
 
-            <div className="work__projects-grid__image__container__dq">
+            <div className="work__projects-grid__image__container__dq cursor-pointer">
               <div className="white"></div>
               <div className="black"></div>
               <Image
@@ -393,7 +385,7 @@ export default function Home() {
               />
             </div>
 
-            <div className="work__projects-grid__image__container__don-julio">
+            <div className="work__projects-grid__image__container__don-julio cursor-pointer">
               <div className="white"></div>
               <div className="black"></div>
               <Image
@@ -403,7 +395,7 @@ export default function Home() {
               />
             </div>
 
-            <div className="work__projects-grid__image__container__pollo-campero">
+            <div className="work__projects-grid__image__container__pollo-campero cursor-pointer">
               <div className="white"></div>
               <div className="black"></div>
               <Image
@@ -413,7 +405,7 @@ export default function Home() {
               />
             </div>
 
-            <div className="work__projects-grid__image__container__wrangler-tag">
+            <div className="work__projects-grid__image__container__wrangler-tag cursor-pointer">
               <div className="white"></div>
               <div className="black"></div>
               <Image
@@ -423,7 +415,7 @@ export default function Home() {
               />
             </div>
 
-            <div className="work__projects-grid__image__container__dallas-mavericks">
+            <div className="work__projects-grid__image__container__dallas-mavericks cursor-pointer">
               <div className="white"></div>
               <div className="black"></div>
               <Image
@@ -433,7 +425,7 @@ export default function Home() {
               />
             </div>
 
-            <div className="work__projects-grid__image__container__budweiser">
+            <div className="work__projects-grid__image__container__budweiser cursor-pointer">
               <div className="white"></div>
               <div className="black"></div>
               <Image
@@ -443,7 +435,7 @@ export default function Home() {
               />
             </div>
 
-            <div className="work__projects-grid__image__container__white-castle">
+            <div className="work__projects-grid__image__container__white-castle cursor-pointer">
               <div className="white"></div>
               <div className="black"></div>
               <Image
@@ -453,7 +445,7 @@ export default function Home() {
               />
             </div>
 
-            <div className="work__projects-grid__image__container__crema-salvadorena">
+            <div className="work__projects-grid__image__container__crema-salvadorena cursor-pointer">
               <div className="white"></div>
               <div className="black"></div>
               <Image
@@ -463,7 +455,7 @@ export default function Home() {
               />
             </div>
 
-            <div className="work__projects-grid__image__container__muenster-meet">
+            <div className="work__projects-grid__image__container__muenster-meet cursor-pointer">
               <div className="white"></div>
               <div className="black"></div>
               <Image
@@ -473,7 +465,7 @@ export default function Home() {
               />
             </div>
 
-            <div className="work__projects-grid__image__container__miamigo">
+            <div className="work__projects-grid__image__container__miamigo cursor-pointer">
               <div className="white"></div>
               <div className="black"></div>
               <Image
@@ -483,7 +475,7 @@ export default function Home() {
               />
             </div>
 
-            <div className="work__projects-grid__image__container__pollo-campero-billboard">
+            <div className="work__projects-grid__image__container__pollo-campero-billboard cursor-pointer">
               <div className="white"></div>
               <div className="black"></div>
               <Image
@@ -493,7 +485,7 @@ export default function Home() {
               />
             </div>
 
-            <div className="work__projects-grid__image__container__children-s-health">
+            <div className="work__projects-grid__image__container__children-s-health cursor-pointer">
               <div className="white"></div>
               <div className="black"></div>
               <Image
@@ -503,7 +495,7 @@ export default function Home() {
               />
             </div>
 
-            <div className="work__projects-grid__image__container__budweiser-fifa">
+            <div className="work__projects-grid__image__container__budweiser-fifa cursor-pointer">
               <div className="white"></div>
               <div className="black"></div>
               <Image
@@ -513,7 +505,7 @@ export default function Home() {
               />
             </div>
 
-            <div className="work__projects-grid__image__container__toyota">
+            <div className="work__projects-grid__image__container__toyota cursor-pointer">
               <div className="white"></div>
               <div className="black"></div>
               <Image
@@ -523,7 +515,7 @@ export default function Home() {
               />
             </div>
 
-            <div className="work__projects-grid__image__container__greyhound">
+            <div className="work__projects-grid__image__container__greyhound cursor-pointer">
               <div className="white"></div>
               <div className="black"></div>
               <Image
@@ -533,7 +525,7 @@ export default function Home() {
               />
             </div>
 
-            <div className="work__projects-grid__image__container__senor-rico">
+            <div className="work__projects-grid__image__container__senor-rico cursor-pointer">
               <div className="white"></div>
               <div className="black"></div>
               <Image
@@ -542,7 +534,9 @@ export default function Home() {
                 layout="responsive"
               />
             </div>
+
           </div>
+          
         </section>
 
         <section className="merch">
@@ -646,6 +640,7 @@ export default function Home() {
             </div>
           </div>
         </section>
+
       </main>
 
       <Footer />
