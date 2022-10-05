@@ -12,7 +12,8 @@
     "next": "12.2.4-canary.9",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "sass": "^1.54.3"
+    "sass": "^1.54.3",
+    "styled-components": "^5.3.6"
   },
   "devDependencies": {
     "eslint": "8.21.0",

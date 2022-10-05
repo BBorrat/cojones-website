@@ -60,10 +60,21 @@ import shopBtnLargeHover from "../public/images/btn-large-shop-hover.svg";
 import submitBtnLargeDefault from "../public/images/btn-large-submit-default.svg";
 import submitBtnLargeHover from "../public/images/btn-large-submit-hover.svg";
 
+import Modal from "../components/Modal";
+
+import React, { useState } from 'react';
+
 // Website
 export default function Home() {
+  const [showModal, setShowModal] = useState(false);
   return (
     <div>
+      <Modal
+                  onClose={() => setShowModal(false)}
+                  show={showModal}
+              >
+                  Hello from the modal!
+      </Modal>
       <Head>
         <title>Co.Jones Creative. Independent Hispanic Ad Agency</title>
         <meta
@@ -74,7 +85,6 @@ export default function Home() {
       </Head>
 
       <Header />
-
       <main>
 
         <section className="home__hero">
@@ -558,6 +568,7 @@ export default function Home() {
           <Headline>
             <h2 className="headline">Contact Us</h2>
           </Headline>
+          <div><button onClick={() => { console.log('MODAL'); setShowModal(true);} }>Open Modal</button></div>
           <div className="cta__elements__container">
             <div className="cta__copy__container">
               <ul className="cta__copy__ul">
