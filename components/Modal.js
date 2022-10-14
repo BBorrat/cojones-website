@@ -39,18 +39,21 @@ const Modal = ({ show, onClose, children, title }) => {
 };
 
 const StyledModalBody = styled.div`
-  padding-top: 10px;
+  height: 100%;
 `;
 
 const StyledModalHeader = styled.div`
   display: flex;
   justify-content: flex-end;
-  font-size: 25px;
+  font-family: "Helvetica Neue";
+  font-size: 25px;z-index: 20;
 `;
 
 const StyledModal = styled.div`
+  display: flex;
+  flex-direction: column;
   position: fixed;
-  background: white;
+  background: #fffaf4;
   top: 0;
   left: 0;
   width: 100%;

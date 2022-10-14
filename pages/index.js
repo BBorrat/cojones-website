@@ -32,8 +32,10 @@ import rac from "../public/images/rac.jpg";
 import direct from "../public/images/direct.jpg";
 import nissanXterra from "../public/images/nissan-xterra.jpg";
 import wranglerQueEsLoqueVes from "../public/images/wrangler-que-es-lo-que-ves.jpg";
+import wranglerQueEsLoqueVesBig from "../public/images/wrangler-que-es-lo-que-ves-big.webp";
 import dq from "../public/images/dq.jpg";
 import donJulio from "../public/images/don-julio.jpg";
+import donJulioBig from "../public/images/don-julio-big.webp";
 import polloCampero from "../public/images/pollo-campero.jpg";
 import wranglerTag from "../public/images/wrangler-tag.jpg";
 import dallasMavericks from "../public/images/dallas-mavericks.jpg";
@@ -41,12 +43,16 @@ import budweiser from "../public/images/budweiser.jpg";
 import whiteCastle from "../public/images/white-castle.jpg";
 import cremaSalvadorena from "../public/images/crema-salvadorena.jpg";
 import muensterMeet from "../public/images/muenster-meet.jpg";
+import muensterMeetBig from "../public/images/muenster-meet-big.webp";
 import miamigo from "../public/images/miamigo.jpg";
+import miamigoBig from "../public/images/miamigo-big.webp";
 import polloCamperoBillboard from "../public/images/pollo-campero-billboard.jpg";
+import polloCamperoBillboardBig from "../public/images/pollo-campero-billboard-big.webp";
 import childrenHealth from "../public/images/children-s-health.jpg";
 import budweiserFifa from "../public/images/budweiser-fifa.jpg";
 import toyota from "../public/images/toyota.jpg";
 import greyhound from "../public/images/greyhound.jpg";
+import greyhoundBig from "../public/images/greyhound-big.webp";
 import senorRico from "../public/images/senor-rico.jpg";
 import ctaArrow from "../public/images/cta-arrow.svg";
 
@@ -67,14 +73,58 @@ import React, { useState } from 'react';
 // Website
 export default function Home() {
   const [showModal, setShowModal] = useState(false);
+  const [currentModalType, setCurrentModalType] = useState('img');
+  const [currentModalImg, setCurrentModalImg] = useState(donJulio);
+  const [currentModalYT, setCurrentModalYT] = useState('Ismkt0x4ZZI&autoplay=1');
+
+  const openModal = (modalType, src) => {
+    setCurrentModalType(modalType);
+    if(modalType === 'img'){
+      setCurrentModalImg(src)
+    }
+    if(modalType === 'video'){
+      setCurrentModalYT(src)
+    }
+
+    setShowModal(true);
+  }
+
   return (
     <div>
       <Modal
-                  onClose={() => setShowModal(false)}
-                  show={showModal}
-              >
-                  Hello from the modal!
+        onClose={() => setShowModal(false)}
+        show={showModal}
+      >
+        <div className="modal">
+          <div className="modal__items__container">
+            <div className="modal__title">
+              <h2></h2>
+            </div>
+            <div className="modal__content">
+              {currentModalType === 'img' && (
+                <Image
+                  src={currentModalImg}
+                />
+              )}
+
+              {currentModalType === 'video' && (
+                <iframe
+                  className="modal__video"
+                  src={`https://www.youtube.com/embed/${currentModalYT}`}
+                  frameborder="0"
+                  allow="acelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  title="Embed youtube"
+                />
+              )}
+            </div>
+          </div>
+        </div>
+        {/* <div className="modal__project__container">
+          <iframe className="modal__video" src="https://www.youtube.com/embed/Ismkt0x4ZZI?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div> */}
       </Modal>
+
       <Head>
         <title>Co.Jones Creative. Independent Hispanic Ad Agency</title>
         <meta
@@ -85,8 +135,10 @@ export default function Home() {
       </Head>
 
       <Header />
+
       <main>
 
+        {/* Hero ----------------------------------------------------------------------- */}
         <section className="home__hero">
           <Headline>
             <h2 className="headline home__hero__headline">
@@ -110,6 +162,7 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Vespa Analogy --------------------------------------------------------------- */}
         <section className="vespa-analogy">
           <Headline>
             <h2 className="headline vespa-analogy__headline">
@@ -134,6 +187,7 @@ export default function Home() {
           </div>
         </section>
 
+        {/* What we do ------------------------------------------------------------------ */}
         <section className="what-we-do">
           <Headline>
             <h2 className="headline what-we-do__headline">
@@ -144,6 +198,7 @@ export default function Home() {
           <BackgroundImage imgHeight="full" src={whatWeDoImage} />
         </section>
 
+        {/* Business model -------------------------------------------------------------- */}
         <section className="business-model">
           <Headline>
             <h2 className="headline business-model__headline">
@@ -155,12 +210,13 @@ export default function Home() {
           <BackgroundImage imgHeight="xl" src={businessModelImageLarge} />
         </section>
 
+        {/* Leaders --------------------------------------------------------------------- */}
         <section className="leaders">
           <div className="leaders__content__container">
             <div className="leaders__image__karla__container">
               <Image
                 className="leaders__image__karla"
-                src={karlaImage}            
+                src={karlaImage}
                 alt="Karla Armendáriz image"
                 layout="fill"
                 objectFit="contain"
@@ -237,7 +293,7 @@ export default function Home() {
             <div className="leaders__image__max__container">
               <Image
                 className="leaders__image__max"
-                src={maxImage}            
+                src={maxImage}
                 alt="Max Lefeld image"
                 layout="fill"
                 objectFit="contain"
@@ -247,6 +303,7 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Social media --------------------------------------------------------------- */}
         <section className="social-media">
           <div className="social-media__cta__link-button__container">
             <LinkButtonTargetBlank
@@ -267,7 +324,7 @@ export default function Home() {
                 layout="responsive"
               />
             </div>
-            <div className="social-media____macaws__image__container">
+            <div className="social-media__macaws__image__container">
               <Image
                 className="social-media__macaws__image"
                 src={socialImageMacaws}
@@ -319,6 +376,7 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Work ---------------------------------------------------------------------- */}
         <section className="work">
           <Headline>
             <h2 className={"headline work__headline text-align-center"}>
@@ -340,8 +398,11 @@ export default function Home() {
           />
 
           <div className="work__projects-grid__container">
-          
-            {/* <div className="work__projects-grid__image__container__rac cursor-pointer">
+
+            <div 
+              className="work__projects-grid__image__container__rac cursor-pointer"
+              onClick={() => { openModal('video', 'Ismkt0x4ZZI?&autoplay=1'); }}
+            >
               <div className="white"></div>
               <div className="black"></div>
               <Image
@@ -349,13 +410,17 @@ export default function Home() {
                 src={rac}
                 layout="responsive"
               />
-            </div> */}
-            <WorkModal 
-             projectsGridImgContainer={"rac"}
-             projectsGridImgSrc={rac}
-            />
+            </div>
+            {/* <WorkModal
+              projectsGridImgContainer={"rac"}
+              projectsGridImgSrc={rac}
+            /> */}
 
-            <div className="work__projects-grid__image__container__direct cursor-pointer">
+            <div
+              className="work__projects-grid__image__container__direct cursor-pointer"
+              onClick={() => { openModal('video', '_kZ8xWPyEIY?&autoplay=1'); }}
+            >
+
               <div className="white"></div>
               <div className="black"></div>
               <Image
@@ -365,7 +430,10 @@ export default function Home() {
               />
             </div>
 
-            <div className="work__projects-grid__image__container__nissan-xterra cursor-pointer">
+            <div 
+              className="work__projects-grid__image__container__nissan-xterra cursor-pointer"
+              onClick={() => { openModal('img', nissanXterra); }}
+            >
               <div className="white"></div>
               <div className="black"></div>
               <Image
@@ -375,7 +443,10 @@ export default function Home() {
               />
             </div>
 
-            <div className="work__projects-grid__image__container__wrangler-que-es-lo-que-ves cursor-pointer">
+            <div 
+              className="work__projects-grid__image__container__wrangler-que-es-lo-que-ves cursor-pointer"
+              onClick={() => { openModal('img', wranglerQueEsLoqueVesBig); }}
+            >
               <div className="white"></div>
               <div className="black"></div>
               <Image
@@ -385,7 +456,10 @@ export default function Home() {
               />
             </div>
 
-            <div className="work__projects-grid__image__container__dq cursor-pointer">
+            <div 
+              className="work__projects-grid__image__container__dq cursor-pointer"
+              onClick={() => { openModal('img', dq); }}
+            >
               <div className="white"></div>
               <div className="black"></div>
               <Image
@@ -395,7 +469,10 @@ export default function Home() {
               />
             </div>
 
-            <div className="work__projects-grid__image__container__don-julio cursor-pointer">
+            <div 
+              className="work__projects-grid__image__container__don-julio cursor-pointer"
+              onClick={() => { openModal('img', donJulioBig); }}
+            >
               <div className="white"></div>
               <div className="black"></div>
               <Image
@@ -405,7 +482,10 @@ export default function Home() {
               />
             </div>
 
-            <div className="work__projects-grid__image__container__pollo-campero cursor-pointer">
+            <div 
+              className="work__projects-grid__image__container__pollo-campero cursor-pointer"
+              onClick={() => { openModal('img', polloCampero); }}
+            >
               <div className="white"></div>
               <div className="black"></div>
               <Image
@@ -415,7 +495,10 @@ export default function Home() {
               />
             </div>
 
-            <div className="work__projects-grid__image__container__wrangler-tag cursor-pointer">
+            <div 
+              className="work__projects-grid__image__container__wrangler-tag cursor-pointer"
+              onClick={() => { openModal('video', 'f8vWxAMNAho?&autoplay=1'); }}
+            >
               <div className="white"></div>
               <div className="black"></div>
               <Image
@@ -425,7 +508,10 @@ export default function Home() {
               />
             </div>
 
-            <div className="work__projects-grid__image__container__dallas-mavericks cursor-pointer">
+            <div 
+              className="work__projects-grid__image__container__dallas-mavericks cursor-pointer"
+              onClick={() => { openModal('video', '9ktWWaQU4wk?&autoplay=1'); }}
+            >
               <div className="white"></div>
               <div className="black"></div>
               <Image
@@ -435,7 +521,10 @@ export default function Home() {
               />
             </div>
 
-            <div className="work__projects-grid__image__container__budweiser cursor-pointer">
+            <div 
+              className="work__projects-grid__image__container__budweiser cursor-pointer"
+              onClick={() => { openModal('video', 'EhBhek9Y5OY?&autoplay=1'); }}
+            >
               <div className="white"></div>
               <div className="black"></div>
               <Image
@@ -445,7 +534,10 @@ export default function Home() {
               />
             </div>
 
-            <div className="work__projects-grid__image__container__white-castle cursor-pointer">
+            <div 
+              className="work__projects-grid__image__container__white-castle cursor-pointer"
+              onClick={() => { openModal('video', 'vEgtxqVocGY?&autoplay=1'); }}
+            >
               <div className="white"></div>
               <div className="black"></div>
               <Image
@@ -455,7 +547,10 @@ export default function Home() {
               />
             </div>
 
-            <div className="work__projects-grid__image__container__crema-salvadorena cursor-pointer">
+            <div 
+              className="work__projects-grid__image__container__crema-salvadorena cursor-pointer"
+              onClick={() => { openModal('img', cremaSalvadorena); }}
+            >
               <div className="white"></div>
               <div className="black"></div>
               <Image
@@ -465,7 +560,10 @@ export default function Home() {
               />
             </div>
 
-            <div className="work__projects-grid__image__container__muenster-meet cursor-pointer">
+            <div 
+              className="work__projects-grid__image__container__muenster-meet cursor-pointer"
+              onClick={() => { openModal('img', muensterMeetBig); }}
+            >
               <div className="white"></div>
               <div className="black"></div>
               <Image
@@ -475,7 +573,10 @@ export default function Home() {
               />
             </div>
 
-            <div className="work__projects-grid__image__container__miamigo cursor-pointer">
+            <div 
+              className="work__projects-grid__image__container__miamigo cursor-pointer"
+              onClick={() => { openModal('img', miamigoBig); }}
+            >
               <div className="white"></div>
               <div className="black"></div>
               <Image
@@ -485,7 +586,10 @@ export default function Home() {
               />
             </div>
 
-            <div className="work__projects-grid__image__container__pollo-campero-billboard cursor-pointer">
+            <div 
+              className="work__projects-grid__image__container__pollo-campero-billboard cursor-pointer"
+              onClick={() => { openModal('img', polloCamperoBillboardBig); }}
+            >
               <div className="white"></div>
               <div className="black"></div>
               <Image
@@ -495,7 +599,10 @@ export default function Home() {
               />
             </div>
 
-            <div className="work__projects-grid__image__container__children-s-health cursor-pointer">
+            <div 
+              className="work__projects-grid__image__container__children-s-health cursor-pointer"
+              onClick={() => { openModal('video', '34QbgRNeN04?&autoplay=1'); }}
+            >
               <div className="white"></div>
               <div className="black"></div>
               <Image
@@ -505,7 +612,10 @@ export default function Home() {
               />
             </div>
 
-            <div className="work__projects-grid__image__container__budweiser-fifa cursor-pointer">
+            <div 
+              className="work__projects-grid__image__container__budweiser-fifa cursor-pointer"
+              onClick={() => { openModal('video', 'ApLFKPM0QPg?&autoplay=1'); }}
+            >
               <div className="white"></div>
               <div className="black"></div>
               <Image
@@ -515,7 +625,10 @@ export default function Home() {
               />
             </div>
 
-            <div className="work__projects-grid__image__container__toyota cursor-pointer">
+            <div 
+              className="work__projects-grid__image__container__toyota cursor-pointer"
+              onClick={() => { openModal('video', 'iE-9z0y_TyI?&autoplay=1'); }}
+            >
               <div className="white"></div>
               <div className="black"></div>
               <Image
@@ -525,7 +638,10 @@ export default function Home() {
               />
             </div>
 
-            <div className="work__projects-grid__image__container__greyhound cursor-pointer">
+            <div 
+              className="work__projects-grid__image__container__greyhound cursor-pointer"
+              onClick={() => { openModal('img', greyhoundBig); }}
+            >
               <div className="white"></div>
               <div className="black"></div>
               <Image
@@ -535,7 +651,10 @@ export default function Home() {
               />
             </div>
 
-            <div className="work__projects-grid__image__container__senor-rico cursor-pointer">
+            <div 
+              className="work__projects-grid__image__container__senor-rico cursor-pointer"
+              onClick={() => { openModal('img', senorRico); }}
+            >
               <div className="white"></div>
               <div className="black"></div>
               <Image
@@ -546,9 +665,10 @@ export default function Home() {
             </div>
 
           </div>
-          
+
         </section>
 
+        {/* Merch ---------------------------------------------------------------------- */}
         <section className="merch">
           <Headline>
             <h2 className="headline-blue">
@@ -564,11 +684,12 @@ export default function Home() {
           <BackgroundImage imgHeight="full" src={cojonesTshirtImageLarge} />
         </section>
 
+        {/* Call to action ------------------------------------------------------------- */}
         <section className="cta" id="cta">
           <Headline>
             <h2 className="headline">Contact Us</h2>
           </Headline>
-          <div><button onClick={() => { console.log('MODAL'); setShowModal(true);} }>Open Modal</button></div>
+
           <div className="cta__elements__container">
             <div className="cta__copy__container">
               <ul className="cta__copy__ul">
@@ -654,6 +775,7 @@ export default function Home() {
 
       </main>
 
+      {/* Footer --------------------------------------------------------------------- */}
       <Footer />
     </div>
   );

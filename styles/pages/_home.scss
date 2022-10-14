@@ -1,3 +1,28 @@
+.modal {
+  height: 100%;
+
+  &__items__container {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    overflow: auto;
+  }
+
+  &__content {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    mix-blend-mode: multiply;
+    width: 80%;
+  }
+
+  &__video {
+    align-self: center;
+    width: 854px;
+    height: 480px;
+  }
+}
+
 /* -------------------------------------------------------- */
 
 .home__hero {
@@ -1177,7 +1202,7 @@
 
 /* -------------------------------------------------------- */
 @include media-down(xxl) {
-
+  
   .home__hero {
 
     &__cta__text {
@@ -1279,6 +1304,14 @@
 
 /* -------------------------------------------------------- */
 @include media-down(lg) {
+
+  .modal {
+  
+    &__video {
+      width: 640px;
+      height: 360px;
+    }
+  }
 
   .home__hero {
 
@@ -1383,6 +1416,14 @@
 /* -------------------------------------------------------- */
 
 @include media-down(md) {
+
+  .modal {
+  
+    &__video {
+      width: 426px;
+      height: 240px;
+    }
+  }
 
   .home__hero {
 
@@ -1712,6 +1753,14 @@
 }
 
 @include media-down(xxs) {
+
+  .modal {
+  
+    &__video {
+      width: 320px;
+      height: 180px;
+    }
+  }
 
   .home__hero {
 
