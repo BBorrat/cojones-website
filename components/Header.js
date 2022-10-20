@@ -5,7 +5,7 @@ export function Header() {
   return (
     <header className="header">
       <div className="header__items__container">
-        <div class="header__logo__container">
+        <div className="header__logo__container">
           <Image
             className="header__logo"
             src={logoCojones}
