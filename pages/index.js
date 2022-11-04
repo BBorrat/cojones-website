@@ -79,10 +79,10 @@ export default function Home() {
 
   const openModal = (modalType, src) => {
     setCurrentModalType(modalType);
-    if(modalType === 'img'){
+    if (modalType === 'img') {
       setCurrentModalImg(src)
     }
-    if(modalType === 'video'){
+    if (modalType === 'video') {
       setCurrentModalYT(src)
     }
 
@@ -145,7 +145,11 @@ export default function Home() {
               Still on the fence about targeting the Hispanic market?
             </h2>
           </Headline>
-          <BackgroundImage imgHeight="partial" src={heroImage} />
+          <BackgroundImage 
+            className="home__hero__image"
+            imgHeight="partial" 
+            src={heroImage}
+          />
           <div className="cta__container home__hero__cta__container">
             <h2 className="cta__text home__hero__cta__text">
               Hispanics are playing a major role in driving U.S. population
@@ -166,11 +170,15 @@ export default function Home() {
         <section className="vespa-analogy">
           <Headline>
             <h2 className="headline vespa-analogy__headline">
-              It's time to consider a more effinient Hispanic ad agency
+              It's time to consider a more efficient Hispanic ad agency
               alternative
             </h2>
           </Headline>
-          <BackgroundImage imgHeight="partial" src={vespaAnalogyImage} />
+          <BackgroundImage
+            className="vespa-analogy__image"
+            imgHeight="partial" 
+            src={vespaAnalogyImage}
+          />
           <div className="cta__container vespa-analogy__cta__container">
             <h2 className="cta__text vespa-analogy__cta__text">
               <span className="blue">Give us a test ride!</span> <br /> We know
@@ -195,7 +203,11 @@ export default function Home() {
               within the Hispanic market.
             </h2>
           </Headline>
-          <BackgroundImage imgHeight="full" src={whatWeDoImage} />
+          <BackgroundImage
+            className="what-we-do__image"
+            imgHeight="full" 
+            src={whatWeDoImage}
+          />
         </section>
 
         {/* Business model -------------------------------------------------------------- */}
@@ -392,14 +404,15 @@ export default function Home() {
           </Headline>
 
           <BackgroundImage
+            className="work__image"
             imgHeight="full"
             src={workImageLarge}
-            objectPosition="bottom"
+            // objectPosition="40%"
           />
 
           <div className="work__projects-grid__container">
 
-            <div 
+            <div
               className="work__projects-grid__image__container__rac cursor-pointer"
               onClick={() => { openModal('video', 'Ismkt0x4ZZI?&autoplay=1'); }}
             >
@@ -430,7 +443,7 @@ export default function Home() {
               />
             </div>
 
-            <div 
+            <div
               className="work__projects-grid__image__container__nissan-xterra cursor-pointer"
               onClick={() => { openModal('img', nissanXterra); }}
             >
@@ -443,7 +456,7 @@ export default function Home() {
               />
             </div>
 
-            <div 
+            <div
               className="work__projects-grid__image__container__wrangler-que-es-lo-que-ves cursor-pointer"
               onClick={() => { openModal('img', wranglerQueEsLoqueVesBig); }}
             >
@@ -456,7 +469,7 @@ export default function Home() {
               />
             </div>
 
-            <div 
+            <div
               className="work__projects-grid__image__container__dq cursor-pointer"
               onClick={() => { openModal('img', dq); }}
             >
@@ -469,7 +482,7 @@ export default function Home() {
               />
             </div>
 
-            <div 
+            <div
               className="work__projects-grid__image__container__don-julio cursor-pointer"
               onClick={() => { openModal('img', donJulioBig); }}
             >
@@ -482,7 +495,7 @@ export default function Home() {
               />
             </div>
 
-            <div 
+            <div
               className="work__projects-grid__image__container__pollo-campero cursor-pointer"
               onClick={() => { openModal('img', polloCampero); }}
             >
@@ -495,7 +508,7 @@ export default function Home() {
               />
             </div>
 
-            <div 
+            <div
               className="work__projects-grid__image__container__wrangler-tag cursor-pointer"
               onClick={() => { openModal('video', 'f8vWxAMNAho?&autoplay=1'); }}
             >
@@ -508,7 +521,7 @@ export default function Home() {
               />
             </div>
 
-            <div 
+            <div
               className="work__projects-grid__image__container__dallas-mavericks cursor-pointer"
               onClick={() => { openModal('video', '9ktWWaQU4wk?&autoplay=1'); }}
             >
@@ -521,7 +534,7 @@ export default function Home() {
               />
             </div>
 
-            <div 
+            <div
               className="work__projects-grid__image__container__budweiser cursor-pointer"
               onClick={() => { openModal('video', 'EhBhek9Y5OY?&autoplay=1'); }}
             >
@@ -534,7 +547,7 @@ export default function Home() {
               />
             </div>
 
-            <div 
+            <div
               className="work__projects-grid__image__container__white-castle cursor-pointer"
               onClick={() => { openModal('video', 'vEgtxqVocGY?&autoplay=1'); }}
             >
@@ -547,7 +560,7 @@ export default function Home() {
               />
             </div>
 
-            <div 
+            <div
               className="work__projects-grid__image__container__crema-salvadorena cursor-pointer"
               onClick={() => { openModal('img', cremaSalvadorena); }}
             >
@@ -560,7 +573,7 @@ export default function Home() {
               />
             </div>
 
-            <div 
+            <div
               className="work__projects-grid__image__container__muenster-meet cursor-pointer"
               onClick={() => { openModal('img', muensterMeetBig); }}
             >
@@ -573,7 +586,7 @@ export default function Home() {
               />
             </div>
 
-            <div 
+            <div
               className="work__projects-grid__image__container__miamigo cursor-pointer"
               onClick={() => { openModal('img', miamigoBig); }}
             >
@@ -586,7 +599,7 @@ export default function Home() {
               />
             </div>
 
-            <div 
+            <div
               className="work__projects-grid__image__container__pollo-campero-billboard cursor-pointer"
               onClick={() => { openModal('img', polloCamperoBillboardBig); }}
             >
@@ -599,7 +612,7 @@ export default function Home() {
               />
             </div>
 
-            <div 
+            <div
               className="work__projects-grid__image__container__children-s-health cursor-pointer"
               onClick={() => { openModal('video', '34QbgRNeN04?&autoplay=1'); }}
             >
@@ -612,7 +625,7 @@ export default function Home() {
               />
             </div>
 
-            <div 
+            <div
               className="work__projects-grid__image__container__budweiser-fifa cursor-pointer"
               onClick={() => { openModal('video', 'ApLFKPM0QPg?&autoplay=1'); }}
             >
@@ -625,7 +638,7 @@ export default function Home() {
               />
             </div>
 
-            <div 
+            <div
               className="work__projects-grid__image__container__toyota cursor-pointer"
               onClick={() => { openModal('video', 'iE-9z0y_TyI?&autoplay=1'); }}
             >
@@ -638,7 +651,7 @@ export default function Home() {
               />
             </div>
 
-            <div 
+            <div
               className="work__projects-grid__image__container__greyhound cursor-pointer"
               onClick={() => { openModal('img', greyhoundBig); }}
             >
@@ -651,7 +664,7 @@ export default function Home() {
               />
             </div>
 
-            <div 
+            <div
               className="work__projects-grid__image__container__senor-rico cursor-pointer"
               onClick={() => { openModal('img', senorRico); }}
             >

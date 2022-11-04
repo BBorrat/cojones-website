@@ -4,7 +4,7 @@ export function BackgroundImage(props) {
   return (
     <div className={"image__container image__container-" + props.imgHeight}>
       <Image
-        className="image"
+        className={props.className}
         alt={props.alt}
         src={props.src}
         layout="fill"
