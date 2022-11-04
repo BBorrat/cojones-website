@@ -111,7 +111,7 @@ export default function Home() {
                 <iframe
                   className="modal__video"
                   src={`https://www.youtube.com/embed/${currentModalYT}`}
-                  frameborder="0"
+                  frameBorder="0"
                   allow="acelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                   title="Embed youtube"
@@ -746,7 +746,7 @@ export default function Home() {
 
             <div className="cta__form__container">
               <form action="" className="cta__form">
-                <label for="name">Your name*</label>
+                <label htmlFor="name">Your name*</label>
                 <input
                   type="text"
                   id="name"
@@ -754,7 +754,7 @@ export default function Home() {
                   placeholder="Type your name"
                 />
 
-                <label for="email">Email*</label>
+                <label htmlFor="email">Email*</label>
                 <input
                   type="email"
                   id="email"
@@ -762,7 +762,7 @@ export default function Home() {
                   placeholder="Type email"
                 />
 
-                <label for="phone">Phone</label>
+                <label htmlFor="phone">Phone</label>
                 <input
                   type="tel"
                   id="phone"
@@ -770,7 +770,7 @@ export default function Home() {
                   placeholder="Type phone number"
                 />
 
-                <label for="text">How can we help?</label>
+                <label htmlFor="text">How can we help?</label>
                 <input
                   type="text"
                   id="text"
