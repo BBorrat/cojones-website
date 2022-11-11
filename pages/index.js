@@ -2,6 +2,9 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 
+// Hooks
+import React, { useState } from 'react';
+
 // Components
 import { Header } from "../components/Header";
 import { Headline } from "../components/Headline";
@@ -10,13 +13,16 @@ import { LinkButton } from "../components/LinkButton";
 import { LinkButtonTargetBlank } from "../components/LinkButtonTargetBlank";
 import { Footer } from "../components/Footer";
 import { WorkModal } from "../components/WorkModal";
+import Modal from "../components/Modal";
 
 // Images
 import heroImage from "../public/images/hero_image.jpg";
 import vespaAnalogyImage from "../public/images/vespa_analogy_image.jpg";
 import whatWeDoImage from "../public/images/what_we_do_image.jpg";
 import businessModelImageLarge from "../public/images/business_model_image_large.jpg";
+import businessModelImageVert from "../public/images/business_model_image_vert.jpg";
 import cojonesTshirtImageLarge from "../public/images/cojones-t-shirt-image-large.jpg";
+import cojonesTshirtImageVert from "../public/images/cojones-t-shirt-image-vert.jpg";
 import workImageLarge from "../public/images/work-image-large.jpg";
 import karlaImage from "../public/images/leaders__karla__image.jpg";
 import maxImage from "../public/images/leaders__max__image.jpg";
@@ -66,9 +72,6 @@ import shopBtnLargeHover from "../public/images/btn-large-shop-hover.svg";
 import submitBtnLargeDefault from "../public/images/btn-large-submit-default.svg";
 import submitBtnLargeHover from "../public/images/btn-large-submit-hover.svg";
 
-import Modal from "../components/Modal";
-
-import React, { useState } from 'react';
 
 // Website
 export default function Home() {
@@ -219,7 +222,13 @@ export default function Home() {
               allows us to adapt to your budget and needs.
             </h2>
           </Headline>
-          <BackgroundImage imgHeight="xl" src={businessModelImageLarge} />
+            <div className="business-model__image"></div>
+          {/* <div className="business-model__image-container">
+          </div> */}
+          {/* <BackgroundImage
+            imgHeight="xl" 
+            src={businessModelImageLarge}
+          /> */}
         </section>
 
         {/* Leaders --------------------------------------------------------------------- */}
@@ -694,7 +703,8 @@ export default function Home() {
               src={shopBtnLargeDefault} srcHover={shopBtnLargeHover}
             />
           </div>
-          <BackgroundImage imgHeight="full" src={cojonesTshirtImageLarge} />
+          <div className="merch__image"></div>
+          {/* <BackgroundImage imgHeight="full" src={cojonesTshirtImageLarge} /> */}
         </section>
 
         {/* Call to action ------------------------------------------------------------- */}

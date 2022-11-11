@@ -115,7 +115,21 @@
 
   &__headline {
     max-width: 80rem;
-  }      
+  } 
+
+  // &__image-container {
+  //   width: 100%;
+  //   height: 100rem;
+  // }
+
+  &__image {
+    background-image: url("../../public/images/business_model_image_large.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 80%;
+    width: 100%;
+    height: 90rem;
+  }     
 }
 
 /* -------------------------------------------------------- */
@@ -1057,6 +1071,14 @@
     bottom: 6rem;
     z-index: 2;
   }
+
+  &__image {
+    background-image: url("../../public/images/cojones-t-shirt-image-large.jpg");
+    background-position: center 60%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 93vh;
+  }
 }
 
 /* -------------------------------------------------------- */
@@ -1275,6 +1297,14 @@
     }    
   }
 
+  .business-model {
+
+    &__image {
+      background-position: center 60%;
+      height: 60rem;
+    }
+  }
+
   .leaders {
 
     &__content__container {
@@ -1306,6 +1336,12 @@
 
     &__cta__arrow__container {
       right: 16.5rem;
+    }
+  }
+
+  .merch {
+    &__image {
+      background-position: 45% 60%;
     }
   }
 
@@ -1502,7 +1538,12 @@
 
     &__headline {
       max-width: 38rem;
-    }        
+    }
+    
+    &__image {
+      background-image: url("../../public/images/business_model_image_vert.jpg");
+      background-position: center 70%;
+    }
   }
 
   /* -------------------------------------------------------- */
@@ -1563,6 +1604,14 @@
   }
 
   /* -------------------------------------------------------- */
+
+  .merch {
+
+    &__image {
+      background-image: url("../../public/images/cojones-t-shirt-image-vert.jpg");
+      height: 94vh;
+    }
+  }
 
   .cta {
 
@@ -1801,6 +1850,13 @@
 
     &__cta__arrow__container {
       top: 8.9rem;
+    }
+  }
+
+  .business-model {
+
+    &__image {
+      height: 50rem;
     }
   }
 }
