@@ -117,11 +117,6 @@
     max-width: 80rem;
   } 
 
-  // &__image-container {
-  //   width: 100%;
-  //   height: 100rem;
-  // }
-
   &__image {
     background-image: url("../../public/images/business_model_image_large.jpg");
     background-repeat: no-repeat;
@@ -1270,6 +1265,15 @@
       right: 18rem;
     }
   }
+
+  .social-media {
+    &__images__container {
+      display: grid;
+      grid-template-areas:
+        "post-1   macaws    workers-1   post-2"
+        "team     locutor   office      woman-with-phone";
+    }
+  }
 }
 
 /* -------------------------------------------------------- */
@@ -1745,9 +1749,9 @@
       display: grid;
       grid-template-areas:
         "macaws       post-1"
-        "team         locution"
-        "workers-1    office"
-        " post-2      woman-with-phone";
+        "workers-1         team"
+        "post-2       woman-with-phone"
+        "locution    office";
     }
   }
 
