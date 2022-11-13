@@ -156,7 +156,7 @@ export default function Home() {
           <div className="cta__container home__hero__cta__container">
             <h2 className="cta__text home__hero__cta__text">
               Hispanics are playing a major role in driving U.S. population
-              growth.<span className="blue home__hero__cta__text__end"> Don't wait any longer.</span>{" "}
+              growth.<span className="blue home__hero__cta__text__end"> Don&apos;t wait any longer.</span>{" "}
             </h2>
             <div className="home__hero__cta__link-button__container">
               <LinkButton href="#cta" src={contactBtnLargeDefault} srcHover={contactBtnLargeHover} />
@@ -173,7 +173,7 @@ export default function Home() {
         <section className="vespa-analogy">
           <Headline>
             <h2 className="headline vespa-analogy__headline">
-              It's time to consider a more efficient Hispanic ad agency
+              It&apos;s time to consider a more efficient Hispanic ad agency
               alternative
             </h2>
           </Headline>
@@ -268,9 +268,9 @@ export default function Home() {
                 presenter, and her experience helping clients penetrate the U.S.
                 Hispanic market spans from strategic planning, advertising,
                 field marketing, promotional/event marketing, and account
-                management. Karla has helped many of the nation's top brands
+                management. Karla has helped many of the nation&apos;s top brands
                 establish themselves in the Hispanic marketplace. Among them are
-                Denny's Restaurants, Nissan, Daimler-Chrysler, Toyota, Subaru,
+                Denny&apos;s Restaurants, Nissan, Daimler-Chrysler, Toyota, Subaru,
                 Pollo Campero and Rent-A-Center. Her consulting experience also
                 includes working on non-profit categories organizations such as
                 Mensa, Carter BloodCare and Catholic Charities.
@@ -286,20 +286,20 @@ export default function Home() {
               </h4>
               <p className="leaders__copy text-align-right">
                 Born in Caracas, Venezuela and graduated with a
-                Journalism/Social Communications bachelor's degree from
+                Journalism/Social Communications bachelor&apos;s degree from
                 Universidad Central de Venezuela. In 2004, Max founded Co.Jones
                 creative.
               </p>
               <p className="leaders__copy text-align-right">
                 With more than 25 years of experience. Started as a copywriter
-                at Lintas. Went on to work at some of the world's leading
+                at Lintas. Went on to work at some of the world&apos;s leading
                 agencies including Leo Burnett, J. Walter Thompson, Ogilvy &
                 Mather, working on such global brands as Coca-Cola, Procter and
                 Gamble, Unilever, Nestle, Kellogg, Gatorade, Heinz.
               </p>
               <p className="leaders__copy text-align-right">
                 In 1995 moved to the US to lead the creative department for
-                FCB/Publicis/Siboney and then moved to be Ornelas' Chief
+                FCB/Publicis/Siboney and then moved to be Ornelas&apos; Chief
                 Creative Officer working for Nissan, Budweiser, Michelob,
                 ALLTEL, Ocean Spray, Texas Rangers, Dallas Mavericks among
                 others.
@@ -307,7 +307,7 @@ export default function Home() {
               <p className="leaders__copy text-align-right">
                 His work has crossed cultural barriers and has been recognized
                 through countless awards including Clio, NY Festival, FIAP,
-                Addy's, O'Toole, Telly's, ANDA, Adage Hispanic Creative Awards,
+                Addy&apos;s, O&apos;Toole, Telly&apos;s, ANDA, Adage Hispanic Creative Awards,
                 HispanicAd, and Se Habla Español.
               </p>
             </div>

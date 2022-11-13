@@ -31,7 +31,7 @@ export function WorkModal(props) {
                         onClick={() => setShowModal(false)}
                     >Close</button> */}
                     <div className="work-module__project__container">
-                        <iframe className="work-module__video" width="560" height="315" src="https://www.youtube.com/embed/Ismkt0x4ZZI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe className="work-module__video" width="560" height="315" src="https://www.youtube.com/embed/Ismkt0x4ZZI" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
             ) : null}
