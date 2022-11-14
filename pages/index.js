@@ -24,7 +24,7 @@ import businessModelImageVert from "../public/images/business_model_image_vert.j
 import cojonesTshirtImageLarge from "../public/images/cojones-t-shirt-image-large.jpg";
 import cojonesTshirtImageVert from "../public/images/cojones-t-shirt-image-vert.jpg";
 import workImageLarge from "../public/images/work-image-large.jpg";
-import karlaImage from "../public/images/leaders__karla__image.jpg";
+//import karlaImage from "../public/images/leaders__karla__image.jpg";
 import maxImage from "../public/images/leaders__max__image.jpg";
 import socialImagePost1 from "../public/images/post-1.jpg";
 import socialImageMacaws from "../public/images/macaws.jpg";
@@ -237,7 +237,7 @@ export default function Home() {
             <div className="leaders__image__karla__container">
               <Image
                 className="leaders__image__karla"
-                src={karlaImage}
+                src="/images/leaders__karla__image.jpg"
                 alt="Karla Armendáriz image"
                 layout="fill"
                 objectFit="contain"

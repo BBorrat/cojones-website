@@ -38,6 +38,10 @@ const Modal = ({ show, onClose, children, title }) => {
   }
 };
 
+const StyledModalTitle = styled.div`
+  font-size: 25px;
+`;
+
 const StyledModalBody = styled.div`
   height: 100%;
 `;
